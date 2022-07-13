@@ -9,5 +9,11 @@ class Task extends Model
 {
     protected $table = 'tasks';
     protected $primaryKey = 'id';
+    protected $fillable = [
+        'task',
+        'visible',
+        'done',
+        'deleted_at'
+    ];
     use SoftDeletes;
 }
