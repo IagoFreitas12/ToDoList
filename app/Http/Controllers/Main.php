@@ -17,14 +17,17 @@ class Main extends Controller
     // ===================================
     public function new_task()
     {
-        return view('new_task');
+        return view('new_task_form');
     }
-
+    // ===================================
+    public function new_task_submit()
+    {
+        echo ('submetido');
+    }
+    // ===================================
     public function show_hidden_tasks() 
     {
-
         $tasks = Task::all();
         return view('all_tasks', ['tasks'=>$tasks]);
-
     }
 }
