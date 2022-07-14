@@ -20,17 +20,9 @@ class Main extends Controller
         return view('new_task_form');
     }
     // ===================================
-    public function new_task_submit(Request $request)
+    public function new_task_submit()
     {
-        if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-        }
-
-        if(!$request->isMethod('post')){
-            die('URL errada');
-        }
-        $text = $request->input('text_new_task');
-    
+        echo ('submetido');
     }
     // ===================================
     public function show_hidden_tasks() 
