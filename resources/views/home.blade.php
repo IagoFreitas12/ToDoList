@@ -9,31 +9,49 @@
         <div class="col">
 
             <div class="my-2 d-flex ml-2">
-                <a 
-                class="btn btn-primary" 
-                data-toggle="collapse" 
+                <a
+
+                class="btn btn-primary"
+                data-toggle="collapse"
                 href="#collapseTask"
-                role="button" 
-                aria-expanded="true" 
+                role="button"
+                aria-expanded="true"
                 aria-controls="collapseTask">
                 Create task</a>
                 <a href="{{Route('allTasks')}}" class="btn btn-primary">Show hidden tasks</a>
                 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseTask" aria-expanded="false" aria-controls="collapseTask">
                     Button with data-target
                 </button>
+                <button id="buttaoparaapertar" onclick="toggle()" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseTask" aria-expanded="false" aria-controls="collapseTask">
+                    Collapse
+                </button>
             </div>
             <hr>
+
+            <p>
+  <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-target
+  </button>
+</p>
+<div class="show" id="collapseExample" style="display:flex;">
+  <div class="card card-body">
+    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+  </div>
+</div>
 
             <div id="collapseTask" class="collapse">
                 <div class="row">
                     <div class="col">
-            
+
                         <h3 class="text-center mb-5">New task</h3>
                         <hr>
-                        
+
                         <form action="{{Route('new_task_submit')}}" method="post">
                             @csrf
-            
+
                             <div class="row">
                                 <div class="col-sm-4 offset-sm-4">
                                     <div class="form-group">
@@ -48,15 +66,15 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            
+
+
                         </form>
-                        
+
                     </div>
                 </div>
             </div>
-            
-            
+
+
 
             @if ($tasks->count() === 0)
                 <p>There are no tasks ToDO.</p>
@@ -78,7 +96,7 @@
                                         {{-- Done --}}
                                         <a href="Route::" class="btn btn-primary btn-sm">
                                             <i class="fa fa-check"></i>
-                                        </a>   
+                                        </a>
                                     @else
                                         {{-- Not done --}}
                                         <a href="" class="btn btn-success btn-sm">
@@ -102,16 +120,16 @@
                                             <i class="fa fa-eye-slash"></i>
                                         </a>
                                     @endif
-                                    
+
                                     {{-- Delete --}}
                                     <a href="" class="btn btn-danger btn-sm">
                                         <i class="fa fa-trash"></i>
-                                    </a> 
+                                    </a>
                                 </td>
                             </tr>
                         @endforeach
                     </tbody>
-                    
+
                 </table>
 
                 <div>

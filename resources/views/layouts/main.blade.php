@@ -17,8 +17,13 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     {{-- FontAwesome --}}
     <link rel="stylesheet" href="{{asset('assets/fontawesome/CSS/fontawesome.min.css')}}">
+    <script src="{{asset('assets/index.js')}}"></script>
 
 </head>
+<script>
+
+
+</script>
 <body>
     <header>
         <a href="{{Route('home')}}"><h3>ToDoList</h3></a>
@@ -28,7 +33,7 @@
     <main>
         @yield('content')
     </main>
-    
+
     <footer>
 
     </footer>
