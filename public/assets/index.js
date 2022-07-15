@@ -1,8 +1,8 @@
 const toggle = () => {
-    const display = document.getElementById("collapseExample").style.display;
+    const display = document.getElementById("collapseCreation").style.display;
     if (display === "none") {
-        document.getElementById("collapseExample").style.display = "flex";
+        document.getElementById("collapseCreation").style.display = "flex";
         return;
     }
-    document.getElementById("collapseExample").style.display = "none";
+    document.getElementById("collapseCreation").style.display = "none";
 };

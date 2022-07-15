@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'Main@home')->name('home');
-Route::get('/new_task', 'Main@new_task')->name('new_task');
+// Route::get('/new_task', 'Main@new_task')->name('new_task');
 Route::get('/allTasks', 'Main@show_hidden_tasks')->name('allTasks');
 
 Route::post('/new_task_submit', 'Main@new_task_submit')->name('new_task_submit');
+Route::post('/task_visibility', 'Main@task_visibility')->name('task_visibility');

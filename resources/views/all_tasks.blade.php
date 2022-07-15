@@ -7,10 +7,6 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col">
-
-            <h3>ToDoList</h3>
-            <hr>
-
             <div class="my-2 d-flex ml-2">
                 <a href="{{Route('new_task')}}" class="btn btn-primary">Create task</a>
                 <a href="{{Route('home')}}" class="btn btn-primary">Hide invisible tasks</a>

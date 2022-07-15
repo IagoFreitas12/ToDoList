@@ -20,9 +20,9 @@ class Main extends Controller
         return view('new_task_form');
     }
     // ===================================
-    public function new_task_submit()
+    public function new_task_submit(Request $request)
     {
-        echo ('submetido');
+        $new_task = $request->input('text_new_task');
     }
     // ===================================
     public function show_hidden_tasks() 
@@ -30,4 +30,10 @@ class Main extends Controller
         $tasks = Task::all();
         return view('all_tasks', ['tasks'=>$tasks]);
     }
+    // ===================================
+    // public function task_visibility(Request $request)
+    // {
+    //     $visibility = $request->input('text')
+    //     return view ('home');
+    // }
 }

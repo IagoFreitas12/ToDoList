@@ -17,12 +17,16 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     {{-- FontAwesome --}}
     <link rel="stylesheet" href="{{asset('assets/fontawesome/CSS/fontawesome.min.css')}}">
+    {{-- JavaScript --}}
+    <script src="{{asset('assets/index.js')}}"></script>
 
 </head>
 <body>
     <header>
-        <a href="{{Route('home')}}"><h3>ToDoList</h3></a>
-        <hr>
+        <div class="container-fluid mt-2">
+            <a class="text-decoration-none text-dark" href="{{Route('home')}}"><h3>ToDoList</h3></a>
+            <hr>
+        </div>
     </header>
 
     <main>
